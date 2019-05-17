@@ -1,24 +1,38 @@
 # BrowserGlobals
 
+A small lightweight angular service for prowser global variables like "window" or "browser"
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name --project browser-globals` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project browser-globals`.
-> Note: Don't forget to add `--project browser-globals` or else it will be added to the default project in your `angular.json` file. 
+After installing it import the BrowserGlobalsService for a singleton instance of the classic browser global variables
 
-## Build
+```
+import {BrowserGlobalsService} from 'browser-globals';
+...
+constructor(private browserGlobals: BrowserGlobalsService) { }
+...
+const window = this.browserGlobals.windowRef();
+..
+```
+### Installing
 
-Run `ng build browser-globals` to build the project. The build artifacts will be stored in the `dist/` directory.
+In your Angular project run
 
-## Publishing
+```
+npm i -save  browser-globals
+```
 
-After building your library with `ng build browser-globals`, go to the dist folder `cd dist/browser-globals` and run `npm publish`.
+## Authors
 
-## Running unit tests
+* **Marco Zuccaroli** - *Initial work* - [Marco Zuccaroli](https://github.com/mzuccaroli)
 
-Run `ng test browser-globals` to execute the unit tests via [Karma](https://karma-runner.github.io).
+See also the list of [contributors](https://github.com/mzuccaroli/angular-browser-globals/graphs/contributors) who participated in this project.
 
-## Further help
+## License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Thanks to [PurpleBooth](https://github.com/PurpleBooth) for the [Readme Template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) 

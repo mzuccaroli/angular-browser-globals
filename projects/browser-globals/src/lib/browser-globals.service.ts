@@ -5,5 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class BrowserGlobalsService {
 
-  constructor() { }
+  constructor() {
+  }
+
+  windowRef(): any {
+    return window;
+  }
+
+  documentRef(): any {
+    return document;
+  }
+
 }

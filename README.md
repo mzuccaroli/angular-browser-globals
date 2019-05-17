@@ -1,27 +1,38 @@
 # BrowserGlobals
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+A small lightweight angular service for prowser global variables like "window" or "browser"
+This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.0.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+After installing it import the BrowserGlobalsService for a singleton instance of the classic browser global variables
 
-## Code scaffolding
+```
+import {BrowserGlobalsService} from 'browser-globals';
+...
+constructor(private browserGlobals: BrowserGlobalsService) { }
+...
+const window = this.browserGlobals.windowRef();
+..
+```
+### Installing
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In your Angular project run
 
-## Build
+```
+npm i -save  browser-globals
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Authors
 
-## Running unit tests
+* **Marco Zuccaroli** - *Initial work* - [Marco Zuccaroli](https://github.com/mzuccaroli)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+See also the list of [contributors](https://github.com/mzuccaroli/angular-browser-globals/graphs/contributors) who participated in this project.
 
-## Running end-to-end tests
+## License
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Further help
+## Acknowledgments
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* Thanks to [PurpleBooth](https://github.com/PurpleBooth) for the [Readme Template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) 
