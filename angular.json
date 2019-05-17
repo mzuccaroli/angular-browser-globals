@@ -2,5 +2,42 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  "projects": {}
+  "projects": {
+    "browser-globals": {
+      "root": "projects/browser-globals",
+      "sourceRoot": "projects/browser-globals/src",
+      "projectType": "library",
+      "prefix": "bg",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/browser-globals/tsconfig.lib.json",
+            "project": "projects/browser-globals/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/browser-globals/src/test.ts",
+            "tsConfig": "projects/browser-globals/tsconfig.spec.json",
+            "karmaConfig": "projects/browser-globals/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/browser-globals/tsconfig.lib.json",
+              "projects/browser-globals/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "browser-globals"
 }
